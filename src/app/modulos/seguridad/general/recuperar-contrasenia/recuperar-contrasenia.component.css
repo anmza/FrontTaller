@@ -1,0 +1,55 @@
+html,
+body {
+    height: 100%;
+
+}
+html {
+    display: table;
+    margin: auto;
+}
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background: white;
+    
+}
+
+.errorValidation label{
+
+    color:red;
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+#login-page {
+   width: 500px;
+   padding-top: 30px;
+}
+
+.color{
+
+    background-color: black;
+    
+}
+.az{
+
+    margin-top: 60px;
+
+}
+
+.padd{
+
+    margin-bottom: 30px;
+}
+
+.add{
+
+    margin-top: 50px;
+}
+
+.card {
+    position: absolute;
+     left: 50%;
+     top: 50%;
+
+}

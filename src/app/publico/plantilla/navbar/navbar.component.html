@@ -1,0 +1,21 @@
+<nav>
+    <div class="nav-wrapper grey darken-3">
+      <a routerLink="/home" class="brand-logo inicio-logo">Inicio</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li *ngIf="SesionActiva"><a routerLink="/parametros/buscar-vehiculo">Vehículo</a></li>
+        <li *ngIf="SesionActiva"><a routerLink="/parametros/buscar-propietario">Propietario</a></li>
+        <li *ngIf="SesionActiva"><a routerLink="parametros/buscar-mecanico">Mecánico</a></li>
+        <li *ngIf="SesionActiva"><a routerLink="/seguridad/salir">Cerrar Sesión</a></li>
+        <li *ngIf="!SesionActiva"><a routerLink="/seguridad/inicio">Iniciar Sesíon</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a routerLink="/parametros/buscar-vehiculo">Vehículo</a></li>
+    <li><a routerLink="/parametros/buscar-propietario">Propietario</a></li>
+    <li><a routerLink="parametros/buscar-mecanico">Mecánico</a></li>
+    <li><a routerLink="/seguridad/salir">Cerrar Sesión</a></li>
+    <li><a routerLink="/seguridad/inicio">Iniciar Sesíon</a></li>
+  </ul>

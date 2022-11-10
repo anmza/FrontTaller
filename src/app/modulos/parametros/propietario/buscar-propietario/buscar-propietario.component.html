@@ -1,0 +1,44 @@
+<a routerLink="/parametros/crear-propietario" class="btn">Crear Propietario</a>
+
+<table class="table responsive">
+
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>Documento</th>
+            <th>Ciudad</th>
+            <th>Correo</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoPropietarios">
+
+            <td>
+                {{p.Nombre}}
+            </td>
+            <td>
+                {{p.Apellido}}
+            </td>
+            <td>
+                {{p.Telefono}}
+            </td>
+            <td>
+                {{p.Documento}}
+            </td>
+            <td>
+                {{p.Ciudad}}
+            </td>
+            <td>
+                {{p.Correo}}
+            </td>
+            <td>
+                <a routerLink="/parametros/editar-propietario/{{p.Id}}" class="btn">Editar Propietario</a>
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>>

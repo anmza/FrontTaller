@@ -1,0 +1,37 @@
+
+<h1 class="center-align">Crear Propietarios</h1>
+<div class="row">
+
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidator" (ngSubmit)="GuardarPropietario()" method="post" action="formulario-contacto.php">
+            <div class="input-field">
+                <label for="Nombre">Nombre</label>
+                <input formControlName="Nombre" type="text" name="Nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="Apellido">Apellido</label>
+                <input formControlName="Apellido" type="text" name="Apellido" required>
+            </div>
+            <div class="input-field">
+                <label for="Telefono">Telefono</label>
+                <input formControlName="Telefono" type="text" name="Telefono" required>
+            </div>
+            <div class="input-field">
+                <label for="Documento">Documento</label>
+                <input formControlName="Documento" type="text" name="Documento" required>
+            </div>
+            <div class="input-field">
+                <label for="Ciudad">Ciudad</label>
+                <input formControlName="Ciudad" type="text" name="Ciudad" required>
+            </div>
+            <div class="input-field">
+                <label for="Correo">Correo</label>
+                <input formControlName="Correo" type="text" name="Correo" required>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidator.valid" class="waves-effect waves-light btn" type="submit"><i class="material-icons right">send</i>Enviar</button>
+            </p>
+        </form>
+    </article> 
+</div>
