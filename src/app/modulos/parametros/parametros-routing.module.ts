@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { BuscarJefeOperacionesComponent } from './jefeOperaciones/buscar-jefe-operaciones/buscar-jefe-operaciones.component';
 import { CrearJefeOperacionesComponent } from './jefeOperaciones/crear-jefe-operaciones/crear-jefe-operaciones.component';
 import { EditarJefeOperacionesComponent } from './jefeOperaciones/editar-jefe-operaciones/editar-jefe-operaciones.component';
@@ -61,7 +62,9 @@ const routes: Routes = [
 
   {
     path: "buscar-propietario",
-    component: BuscarPropietarioComponent
+    component: BuscarPropietarioComponent,
+    canActivate:[ValidadorSesionGuard]
+    
   },
 
   {
@@ -75,7 +78,7 @@ const routes: Routes = [
   },
 
   {
-    path: "eliminar-propietario",
+    path: "eliminar-propietario/:Id",
     component: EliminarPropietarioComponent
   },
 
@@ -90,12 +93,12 @@ const routes: Routes = [
   },
 
   {
-    path: "editar-vehiculo",
+    path: "editar-vehiculo/:Id",
     component: EditarVehiculoComponent
   },
 
   {
-    path: "eliminar-vehiculo",
+    path: "eliminar-vehiculo/:Id",
     component: EliminarVehiculoComponent
   },
   

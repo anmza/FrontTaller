@@ -1,1 +1,28 @@
-<p>eliminar-vehiculo works!</p>
+
+<h1 class="center-align">Eliminar Vehiculo</h1>
+<div class="row">
+
+    <article class="col s6 offset-s3">
+        <form method="post" action="formulario-contacto.php">
+            <input type="hidden" formControlName="Id">
+            <div class="input-field">
+                <strong>¿Está seguro(a) de eliminar el siguiente vehículo?</strong>
+                <br/>
+                <ul>
+                    <li>
+                        Placa: {{Placa}}
+                    </li>
+                    <li>
+                       Marca: {{Marca}}
+                    </li>
+                </ul>
+            </div>
+            <p class="center-align">
+                <button  class="waves-effect waves-light btn red close" type="button" (click)="BorrarVehiculo()">Eliminar</button>
+                <button class="waves-effect waves-light btn far" routerLink="/parametros/buscar-vehiculo">Cancelar</button>
+            </p>
+        </form>
+    </article> 
+</div>
+
+

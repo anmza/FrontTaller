@@ -23,6 +23,12 @@ token: String = '';
 
   }
 
+  ObtenerPropietarioPorId(Id: string): Observable<ModeloPropietario>{
+
+    return this.http.get<ModeloPropietario>(`${this.url}/propietarios/${Id}`)
+
+  }
+
   CrearPropietario(propietario: ModeloPropietario): Observable<ModeloPropietario>{
 
     return this.http.post<ModeloPropietario>(`${this.url}/propietarios`, propietario,{
@@ -39,7 +45,7 @@ token: String = '';
 
   EditarPropietario(propietario: ModeloPropietario): Observable<ModeloPropietario>{
 
-    return this.http.put<ModeloPropietario>(`${this.url}/propietarios`, propietario,{
+    return this.http.put<ModeloPropietario>(`${this.url}/propietarios/${propietario.Id}`, propietario,{
 
       headers: new HttpHeaders({
 

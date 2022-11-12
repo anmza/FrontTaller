@@ -1,1 +1,45 @@
-<p>editar-vehiculo works!</p>
+
+<h1 class="center-align">Editar Vehiculo</h1>
+<div class="row">
+
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidator" (ngSubmit)="EditarVehiculo()" method="post" action="formulario-contacto.php">
+            <input type="hidden" formControlName="Id">
+            <div class="input-field">
+                <label for="Placa" class="active">Placa</label>
+                <input formControlName="Placa" type="text" name="Placa" required>
+            </div>
+            <div class="input-field">
+                <label for="Marca" class="active">Marca</label>
+                <input formControlName="Marca" type="text" name="Marca" required>
+            </div>
+            <div class="input-field">
+                <label for="Modelo" class="active">Modelo</label>
+                <input formControlName="Modelo" type="text" name="Modelo" required>
+            </div>
+            <div class="input-field">
+                <label for="Pasajeros" class="active">Pasajeros</label>
+                <input formControlName="Pasajeros" type="text" name="Pasajeros" required>
+            </div>
+            <div class="input-field">
+                <label for="Motor" class="active">Motor</label>
+                <input formControlName="Motor" type="text" name="Motor" required>
+            </div>
+            <div class="input-field">
+                <label for="Pais" class="active">Pais</label>
+                <input formControlName="Pais" type="text" name="Pais" required>
+            </div>
+
+            <div class="input-field">
+                <label for="Descripcion" class="active">Descripcion</label>
+                <input formControlName="Descripcion" type="text" name="Descripcion" required>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidator.valid" class="waves-effect waves-light btn" type="submit">Editar</button>
+                <button class="waves-effect waves-light btn far" routerLink="/parametros/buscar-vehiculo">Cancelar</button>
+            </p>
+        </form>
+    </article> 
+</div>
+

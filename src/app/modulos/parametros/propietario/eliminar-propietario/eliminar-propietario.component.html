@@ -1,1 +1,27 @@
-<p>eliminar-propietario works!</p>
+
+<h1 class="center-align">Eliminar Propietarios</h1>
+<div class="row">
+
+    <article class="col s6 offset-s3">
+        <form method="post" action="formulario-contacto.php">
+            <input type="hidden" formControlName="Id">
+            <div class="input-field">
+                <strong>¿Está seguro(a) de eliminar el siguiente propietario?</strong>
+                <br/>
+                <ul>
+                    <li>
+                        Documento: {{Documento}}
+                    </li>
+                    <li>
+                       Nombre: {{Nombre}}
+                    </li>
+                </ul>
+            </div>
+            <p class="center-align">
+                <button  class="waves-effect waves-light btn red close" type="button" (click)="BorrarPropietario()">Eliminar</button>
+                <button class="waves-effect waves-light btn far" routerLink="/parametros/buscar-propietario">Cancelar</button>
+            </p>
+        </form>
+    </article> 
+</div>
+

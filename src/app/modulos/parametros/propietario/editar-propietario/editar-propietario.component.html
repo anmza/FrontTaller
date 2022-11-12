@@ -1,1 +1,39 @@
-<p>editar-propietario works!</p>
+
+<h1 class="center-align">Editar Propietario</h1>
+<div class="row">
+
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidator" (ngSubmit)="EditarPropietario()" method="post" action="formulario-contacto.php">
+            <input type="hidden" formControlName="Id">
+            <div class="input-field">
+                <label for="Nombre" class="active">Nombre</label>
+                <input formControlName="Nombre" type="text" name="Nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="Apellido" class="active">Apellido</label>
+                <input formControlName="Apellido" type="text" name="Apellido" required>
+            </div>
+            <div class="input-field">
+                <label for="Telefono" class="active">Telefono</label>
+                <input formControlName="Telefono" type="text" name="Telefono" required>
+            </div>
+            <div class="input-field">
+                <label for="Documento" class="active">Documento</label>
+                <input formControlName="Documento" type="text" name="Documento" required>
+            </div>
+            <div class="input-field">
+                <label for="Ciudad" class="active">Ciudad</label>
+                <input formControlName="Ciudad" type="text" name="Ciudad" required>
+            </div>
+            <div class="input-field">
+                <label for="Correo" class="active">Correo</label>
+                <input formControlName="Correo" type="text" name="Correo" required>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidator.valid" class="waves-effect waves-light btn" type="submit">Editar</button>
+                <button class="waves-effect waves-light btn far" routerLink="/parametros/buscar-propietario">Cancelar</button>
+            </p>
+        </form>
+    </article> 
+</div>

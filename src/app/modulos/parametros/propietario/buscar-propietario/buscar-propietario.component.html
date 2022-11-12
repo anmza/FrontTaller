@@ -1,3 +1,5 @@
+
+
 <a routerLink="/parametros/crear-propietario" class="btn">Crear Propietario</a>
 
 <table class="table responsive">
@@ -11,6 +13,7 @@
             <th>Ciudad</th>
             <th>Correo</th>
             <th>Editar</th>
+            <th>Eliminar</th>
         </tr>
     </thead>
     <tbody>
@@ -35,7 +38,10 @@
                 {{p.Correo}}
             </td>
             <td>
-                <a routerLink="/parametros/editar-propietario/{{p.Id}}" class="btn">Editar Propietario</a>
+                <a routerLink="/parametros/editar-propietario/{{p.Id}}" class="btn">Editar</a>
+            </td>
+            <td>
+                <a routerLink="/parametros/eliminar-propietario/{{p.Id}}" class="btn red darken-1">Eliminar</a>
             </td>
 
         </tr>

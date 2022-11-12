@@ -27,7 +27,7 @@ export class CrearPropietarioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  GuardarPropietario(){
+  GuardarPropietario(){ 
 
     let Nombre = this.fgValidator.controls["Nombre"].value;
     let Apellido = this.fgValidator.controls["Apellido"].value;
