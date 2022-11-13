@@ -4,6 +4,8 @@ import { Router, RouterLink } from '@angular/router';
 import { ModeloPropietario } from 'src/app/modelos/propietarioModelo';
 import { PropietarioService } from 'src/app/services/propietario.service';
 
+declare const  InitSelects: any;
+
 @Component({
   selector: 'app-crear-propietario',
   templateUrl: './crear-propietario.component.html',
@@ -25,7 +27,12 @@ export class CrearPropietarioComponent implements OnInit {
   constructor(private fb: FormBuilder, private servicioPropietario: PropietarioService, private router: Router) { }
 
   ngOnInit(): void {
+    
+    setTimeout(() => {
+      InitSelects();
+    }, 500);
   }
+
 
   GuardarPropietario(){ 
 

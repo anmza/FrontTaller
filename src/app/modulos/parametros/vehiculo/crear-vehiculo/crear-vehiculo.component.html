@@ -9,13 +9,38 @@
                 <input formControlName="Placa" type="text" name="Placa" required>
             </div>
             <div class="input-field">
-                <label for="Marca">Marca</label>
-                <input formControlName="Marca" type="text" name="Marca" required>
-            </div>
-            <div class="input-field">
-                <label for="Modelo">Modelo</label>
-                <input formControlName="Modelo" type="text" name="Modelo" required>
-            </div>
+                <select formControlName="Marca">
+                  <option value="" selected></option>
+                  <option value="BMW">BMW</option>
+                  <option value="KIA">KIA</option>
+                  <option value="Audi">Audi</option>
+                  <option value="Chevrolet">Chevrolet</option>
+                  <option value="Citroën">Citroën</option>
+                  <option value="Daewoo">Daewoo</option>
+                  <option value="Dodge">Dodge</option>
+                  <option value="Ferrari">Ferrari</option>
+                  <option value="Fiat">Fiat</option>
+                  <option value="Ford">Ford</option>
+                  <option value="Honda">Honda</option>
+                  <option value="Jeep">Jeep</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Honda">Honda</option>
+                  <option value="Nissan">Nissan</option>
+                  <option value="Peugeot">Peugeot</option>
+                  <option value="Renault">Renault</option>
+                  <option value="Volkswagen">Volkswagen</option>
+                  <option value="Volvo">Volvo</option>
+                </select>
+                <label>Marca</label>
+              </div>
+              <div class="input-field">
+                <select formControlName="Modelo" >
+                  <option value="" selected></option>
+                  <option *ngFor="let p of numeros" value={{p}}>{{p}}</option>
+                  
+                </select>
+                <label>Modelo</label>
+              </div>
             <div class="input-field">
                 <label for="Pasajeros">Pasajeros</label>
                 <input formControlName="Pasajeros" type="text" name="Pasajeros" required>
@@ -25,9 +50,18 @@
                 <input formControlName="Motor" type="text" name="Motor" required>
             </div>
             <div class="input-field">
-                <label for="Pais">Pais</label>
-                <input formControlName="Pais" type="text" name="Pais" required>
-            </div>
+                <select formControlName="Pais">
+                  <option value="" selected></option>
+                  <option value="Estados Unidos">Estados Unidos</option>
+                  <option value="Alemania">Alemania</option>
+                  <option value="Francia">Francia</option>
+                  <option value="Japon">Japon</option>
+                  <option value="Italia">Italia</option>
+                  <option value="China">China</option>
+                  <option value="India">India</option>
+                </select>
+                <label>País</label>
+              </div>
 
             <div class="input-field">
                 <label for="Descripcion">Descripcion</label>

@@ -4,12 +4,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { VehiculoService } from 'src/app/services/vehiculo.service';
 import { ModeloVehiculo } from 'src/app/modelos/vehiculoModelo';
 
+declare const InitSelects: any;
+
 @Component({ 
   selector: 'app-crear-vehiculo',
   templateUrl: './crear-vehiculo.component.html',
   styleUrls: ['./crear-vehiculo.component.css']
 })
 export class CrearVehiculoComponent implements OnInit {
+
+public numeros: number[]= Array.from({length: 2024 - 1960}, (f, g) => g + 1960);
 
   fgValidator: FormGroup = this.fb.group({
 
@@ -26,7 +30,15 @@ export class CrearVehiculoComponent implements OnInit {
   constructor(private fb: FormBuilder, private servicioVehiculo: VehiculoService, private router: Router) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      InitSelects();
+    }, 500);
+
+  
   }
+
+  
+
 
   GuardarVehiculo(){ 
 

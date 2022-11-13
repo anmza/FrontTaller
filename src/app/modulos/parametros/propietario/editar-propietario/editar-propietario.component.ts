@@ -4,6 +4,8 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ModeloPropietario } from 'src/app/modelos/propietarioModelo';
 import { PropietarioService } from 'src/app/services/propietario.service';
 
+declare const  InitSelects: any;
+
 @Component({
   selector: 'app-editar-propietario',
   templateUrl: './editar-propietario.component.html',
@@ -30,6 +32,9 @@ export class EditarPropietarioComponent implements OnInit {
 
     this.Id = this.route.snapshot.params["Id"];
     this.BuscarPropietario();
+    setTimeout(() => {
+      InitSelects();
+    }, 500);
   }
 
   BuscarPropietario(){

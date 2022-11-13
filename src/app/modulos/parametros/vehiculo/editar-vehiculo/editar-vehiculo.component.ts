@@ -4,12 +4,16 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ModeloVehiculo } from 'src/app/modelos/vehiculoModelo';
 import { VehiculoService } from 'src/app/services/vehiculo.service';
 
+declare const InitSelects: any;
+
 @Component({ 
   selector: 'app-editar-vehiculo',
   templateUrl: './editar-vehiculo.component.html',
   styleUrls: ['./editar-vehiculo.component.css']
 })
 export class EditarVehiculoComponent implements OnInit {
+
+  public numeros: number[]= Array.from({length: 2024 - 1960}, (f, g) => g + 1960);
 
   Id: string = '';
 
@@ -32,6 +36,9 @@ export class EditarVehiculoComponent implements OnInit {
 
     this.Id = this.route.snapshot.params["Id"];
     this.BuscarVehiculo();
+    setTimeout(() => {
+      InitSelects();
+    }, 500);
   }
 
   BuscarVehiculo(){
